@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 as build
 
-ARG DAR_VER=2.6.16
+ARG DAR_VER=2.7.5
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -q update && \
