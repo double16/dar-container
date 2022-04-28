@@ -19,14 +19,14 @@ RUN cd /usr/local/src && \
   make install-strip && \
   ldconfig &&\
   ./configure --prefix=/tmp/root && \
-  make -j 6 && \
+  make -j 2 && \
   make install-strip
 
 RUN cd /usr/local/src && \
   tar xzf dar-${DAR_VER}.tar.gz && \
   cd dar-${DAR_VER} && \
   ./configure --prefix=/tmp/root && \
-  make -j 6 && \
+  make -j 2 && \
   make install-strip
 
 FROM ubuntu:20.04
