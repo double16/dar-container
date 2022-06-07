@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as build
+FROM ubuntu:22.04 as build
 
 ARG DAR_VER=2.7.5
 ARG THREADAR_VER=1.3.5
@@ -25,11 +25,11 @@ RUN cd /usr/local/src && \
 RUN cd /usr/local/src && \
   tar xzf dar-${DAR_VER}.tar.gz && \
   cd dar-${DAR_VER} && \
-  ./configure --prefix=/tmp/root && \
+  ./configure --disable-dar-static --prefix=/tmp/root && \
   make -j 2 && \
   make install-strip
 
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 COPY --from=build /tmp/root/ /usr/
 
