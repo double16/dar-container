@@ -1,7 +1,7 @@
 FROM ubuntu:22.04 as build
 
-ARG DAR_VER=2.7.5
-ARG THREADAR_VER=1.3.5
+ARG DAR_VER=2.7.6
+ARG THREADAR_VER=1.4.0
 ENV DEBIAN_FRONTEND=noninteractive
 
 ADD https://sourceforge.net/projects/dar/files/dar/${DAR_VER}/dar-${DAR_VER}.tar.gz/download /usr/local/src/dar-${DAR_VER}.tar.gz
