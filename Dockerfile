@@ -1,6 +1,6 @@
 FROM ubuntu:22.04 as build
 
-ARG DAR_VER=2.7.8
+ARG DAR_VER=2.7.9
 ARG THREADAR_VER=1.4.0
 ENV DEBIAN_FRONTEND=noninteractive
 
