@@ -1,6 +1,6 @@
-FROM ubuntu:22.04 as build
+FROM ubuntu:24.04 as build
 
-ARG DAR_VER=2.7.12
+ARG DAR_VER=2.7.14
 ARG THREADAR_VER=1.4.0
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -29,7 +29,7 @@ RUN cd /usr/local/src && \
   make -j 2 && \
   make install-strip
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 COPY --from=build /tmp/root/ /usr/
 
